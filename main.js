@@ -23,11 +23,12 @@ function run() {
       chess.appendChild(div);
     });
 
+    //tablica wszystkich rozwiazan
     const originArr = runFunction();
     console.log(originArr);
 
     let firstSolution = changeArr(originArr[0]);
-
+    //wyznaczenie pierwszego rozwiazania
     firstSolution.forEach(place => {
       for (let i = 0; i <= doneArray.length; i++) {
         if (i === place) {
@@ -39,6 +40,7 @@ function run() {
 }
 //
 //
+// reset button
 let clear = document.querySelector(".clear");
 clear.addEventListener("click", clearFields);
 function clearFields() {
@@ -50,6 +52,7 @@ function clearFields() {
 }
 //
 //
+// wyznacz N
 function handleSubmit(e) {
   e.preventDefault();
   const input = document.querySelector(".input").value;
@@ -92,16 +95,16 @@ function runFunction() {
 }
 //
 //
-// solution
+//solution;
 function queenPuzzle(rows, columns) {
   return rows <= 0 ? [[]] : addQueen(rows - 1, columns);
 }
 //
 //
 //
-function addQueen(newRow, columns, prevSolution) {
+function addQueen(newRow, columns) {
+  //8,8
   let newSolutions = [];
-  let someSol = [];
   let prev = queenPuzzle(newRow, columns);
   for (let i = 0; i < prev.length; i++) {
     let solution = prev[i];
