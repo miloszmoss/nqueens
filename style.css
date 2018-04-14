@@ -1,0 +1,101 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Gugi", cursive;
+  color: #eee;
+}
+
+body {
+  box-sizing: border-box;
+  background: linear-gradient(to right, #2e3f5e, #325072);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 200vh;
+}
+
+.container {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.heading__1 {
+  font-size: 7rem;
+}
+.measure {
+  margin: 1.5rem 0;
+  font-size: 2rem;
+}
+
+.input {
+  height: 3.5rem;
+  width: 16rem;
+  margin-top: 2rem;
+  background-color: #ddd;
+  border: none;
+  font-size: 2rem;
+  font-weight: bold;
+  padding-left: 2rem;
+  margin-bottom: 2rem;
+}
+
+.submit,
+.clear {
+  height: 3.5rem;
+  width: 12rem;
+  font-size: 1.5rem;
+  border-radius: 0.5rem;
+  border: none;
+  background: rgb(223, 219, 219);
+  border: 2px solid rgb(133, 130, 130);
+  cursor: pointer;
+  display: inline;
+}
+
+.clear {
+  display: inline;
+}
+
+.chess-board {
+  margin-top: 5rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  height: 100%;
+}
+
+.chess-board__puzzle {
+  height: 8rem;
+  width: 8rem;
+  position: relative;
+  border: 3px solid gainsboro;
+  background-color: gray;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.results {
+  padding-left: 5rem;
+  font-size: 3rem;
+  margin-top: 8rem;
+}
